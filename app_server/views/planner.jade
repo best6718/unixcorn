@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app = 'myApp')
 
 extends layout
 
@@ -8,6 +8,7 @@ block content
       doctype html
       html
         head
+           
             p Input your price range below
               label.radio-inline
               input(type='radio', name='optradio', id='opr1')
@@ -29,6 +30,23 @@ block content
               label.radio-inline
               input(type='radio', name='optradio2', , id='disopr3')
               | Road Trip: 25+ miles 
+              
+              h1 Choose your rating
+              fieldset.rating
+                input#star5(type='radio', name='rating', value='5')
+                label.full(for='star5', title='Awesome - 5 stars')
+                input#star4(type='radio', name='rating', value='4')
+                label.full(for='star4', title='Pretty good - 4 stars')
+                
+                input#star3(type='radio', name='rating', value='3')
+                label.full(for='star3', title='Meh - 3 stars')
+                
+                input#star2(type='radio', name='rating', value='2')
+                label.full(for='star2', title='Kinda bad - 2 stars')
+                
+                input#star1(type='radio', name='rating', value='1')
+                label.full(for='star1', title='Sucks big time - 1 star')
+
             nav
               p Minimum Length of Activity
           
@@ -45,7 +63,6 @@ block content
                 input(type='text', name='begin', id= 'begin')
                 
 
-              
               p Time Activity Ends by
               
                 input(type='text', name='end', id= 'end')
@@ -57,6 +74,13 @@ block content
                     a(href='#') Bus
                     a(href='#') Car
                     a(href='#') Bike
+            nav
+              div(ng-app='')
+                p
+                   | Name : 
+                   input(type='text', ng-model='name')
+                   h1 Hello {{name}}
+
           style.
             /* The Modal (background) */
             .modal {
@@ -171,5 +195,6 @@ block content
                   }
                 }
               }
+  script(src='/node_modules/angular/myApp.js')
   // script(language='JavaScript' src='/public/javascripts/results.js')
   // script(language='JavaScript'  src='/public/bootstrap/js/results.js')
