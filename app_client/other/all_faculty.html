@@ -1,0 +1,12 @@
+<h1>Listing All {{ allfacCon.title }}  <h1>
+
+
+<ul>
+  <li ng-repeat="f in allfacCon.faculty">
+      <a ng-href="#/faculty/{{ f._id }}">{{ f.name }}</a>
+  </li>
+</ul>
+
+
+ <a ng-href="#/addfaculty/"> Add a New Faculty Record  to DB </a>
+ 

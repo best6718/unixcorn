@@ -1,0 +1,19 @@
+<h2>Add a professor to the DB <h2>
+
+<form name="faculty_form" ng-submit="addfacCon.addFaculty()">
+  Name: <input  type= "text" id="name" required ng-minlength="2" ng-maxlength="15" 
+          ng-model ="addfacCon.name" >
+          
+  <div ng-show="faculty_form.name.$dirty && faculty_form.name.$invalid">
+    <p>The name field is required and must have 2 to 15 characters</p>        
+  </div>
+  
+  Specialty: <input  type= "text" id="specialty" required ng-model ="addfacCon.specialty" >
+          
+  Institution: <input  type= "text" id="institution" required  ng-model ="addfacCon.institution" >    
+          
+  <br> <button type= "submit"> Add New Faculty To DB </button>
+  
+</form>
+
+
