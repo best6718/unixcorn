@@ -8,10 +8,39 @@ var sendJSONresponse = function(res, status, content){
 };
 
 module.exports.findResults = function(req, res){
+    
     activityResults.findOne({name:req.params.name}).exec(function(err,data){
         sendJSONresponse(res,200, data);
     });
 };
+
+module.exports.resultsAddName = function(req, res) {
+  console.log("POST results names");
+
+  console.log('req params body' , req.params, req.body);
+
+  activityResults
+    .create({
+      name : req.body.name,
+      specialty : req.body.specialty,
+      institution : req.body.institution, 
+      courses : req.body.courses
+     
+    }, function(err, activityResults) {
+      if (err) {
+        console.log("can't create results");
+        res
+          .status(400)
+          .json(err);
+      } else {
+        console.log("Job done", activityResults);
+        res
+          .status(201)
+          .json(activityResults);
+      }
+    });
+};
+
 
 module.exports.findIdResults = function(req, res){
       activityResults
