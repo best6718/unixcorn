@@ -13,7 +13,10 @@ router.get('/login',  ctrlMain.login);
 router.get('/signup', ctrlMain.signup);
 
 //Schemas
-router.get('/activityResults/:name', ctrlActivity.findResults);
+router
+    .route('/activityResults/:name')
+    .get(ctrlActivity.findResults)
+    .post(ctrlActivity.resultsAddName);
 router.get('/findbyidResults/:activityId', ctrlActivity.findIdResults);
 router.get('/getAllResults', ctrlActivity.getAllResults);
 router.get('/activityResults2/:name', ctrlActivity.findResults2);
