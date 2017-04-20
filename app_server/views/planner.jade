@@ -90,6 +90,7 @@ block content
                 select(ng-model='selectedTimeActivityEnds', ng-options='x.timeAMPM for x in amOrPm')
                 h1 You selected: {{selectedTimeActivityEnds.timeAMPM}}
             nav
+              p Please choose a way to Travel:
               select(ng-model='selectedTransportation', ng-options='x.transport for x in transportation')
               h1 You selected: {{selectedTransportation.transport}}
                   

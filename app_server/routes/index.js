@@ -2,9 +2,10 @@ var express = require('express');
 var router = express.Router();
 var ctrlMain = require('../controllers/main'); //one up in dir, controllers, then main
 var ctrlActivity = require('../../app_api/controllers/activityControl');
-//var apiHome = require('/app_api/routes/home'); 
+// var apiHome = require('/app_api/routes/home'); 
+router.get('/', ctrlMain.index);
+//router.get('/', ctrlMain.layout);
 
-router.get('/', ctrlMain.layout);
 router.get('/planner', ctrlMain.planner);
 router.get('/about', ctrlMain.about);
 router.get('/contact', ctrlMain.contact);
@@ -12,7 +13,7 @@ router.get('/events', ctrlMain.events);
 router.get('/login',  ctrlMain.login);
 router.get('/signup', ctrlMain.signup);
 
-//Schemas
+// //Schemas
 router
     .route('/activityResults/:name')
     .get(ctrlActivity.findResults)

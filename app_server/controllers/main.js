@@ -1,32 +1,36 @@
 /* GET home page */
 var mongoose = require('mongoose');
-module.exports.layout = function(req, res){
-    //console.log(req.method, req.url);
-    res.render('layout', { title: 'Day Planner' });
+
+exports.index = function(req, res){
+    res.render('index', { title: 'ejs' });
+    
 };
-module.exports.planner = function(req, res){
+
+exports.planner = function(req, res){
     //console.log(req.method, req.url);
     res.render('planner', { title: 'Day Planner' });
 };
-module.exports.about = function(req, res){
+
+exports.about = function(req, res){
     //console.log(req.method, req.url);
     res.render('about', { title: 'Day Planner' });
 };
-module.exports.contact = function(req, res){
-    //console.log(req.method, req.url);
+
+exports.contact = function(req, res){
     res.render('contact', { title: 'Day Planner' });
 };
-module.exports.events = function(req, res){
+
+exports.events = function(req, res){
     //console.log(req.method, req.url);
     res.render('events', { title: 'Day Planner' });
 };
 
-module.exports.login = function(req, res){
+exports.login = function(req, res){
     //console.log(req.method, req.url);
     res.render('login', { title: 'Day Planner' });
 };
 
-module.exports.signup = function(req, res){
+exports.signup = function(req, res){
     //console.log(req.method, req.url);
     res.render('signup', { title: 'Day Planner' });
 };
