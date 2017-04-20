@@ -1305,7 +1305,7 @@
 			display: flex;
 			margin-bottom: 0;
 			list-style: none;
-			padding-left: 0;
+			padding-left: 0.3rem;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
 		}
@@ -1671,7 +1671,7 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-/*Rating
+Rating
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
@@ -1685,7 +1685,7 @@
 .rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;
-}*/
+}
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
 fieldset, label { margin: 0; padding: 0; }
@@ -1694,18 +1694,21 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
 
-.rating { 
+/*.rating { 
   border: none;
   float: center;
-}
+  padding-right: 1000px;
+
+} */
 
 .rating > input { display: none; } 
 .rating > label:before { 
-  margin: 5px;
+  margin: 25px;
   font-size: 1.25em;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
+  padding-right: 30px;
 }
 
 .rating > .half:before { 
@@ -1715,12 +1718,14 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 .rating > label { 
   color: #ddd; 
- float: center; 
+ float:  right; 
+
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 /*make it centered*/
+
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
@@ -1730,3 +1735,4 @@ h1 { font-size: 1.5em; margin: 10px; }
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
