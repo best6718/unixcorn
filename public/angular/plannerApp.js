@@ -71,9 +71,6 @@ var MyController = function($scope){
     
     
     $scope.resultsForPlanner = function(){
-        
-    
-        
     //INFORMATION TAKEN FROM RADIO BUTTONS     
         //Specifying the price -> specify the travel method
         if($scope.opr2 =='vol1'){ // This is for when looking for cheap stuff
@@ -113,41 +110,36 @@ var MyController = function($scope){
        
     };
     
-    
-   
-    
+    $scope.problem2 = function(){
+        if($scope.min.length == 3 ){
+            $scope.visible = true;    
+                return true;
+        }else{
+                return false;
+        }
+    };//problem 1 
         
-
+    $scope.visible = true; 
+    $scope.disableSpan = function(thingy){
+        if(thingy == true){
+            $scope.visible = false; 
+        }else{
+            $scope.visible = false; 
+        }
+        return $scope.visible;
+    }; 
+        
+    $scope.signUP = function($scope){
+        $scope.user = 'John Doe';
+        $scope.email = 'john.doe@gmail.com';
+        $scope.password1 = '1234';
+        $scope.password2 = '1234';
+    };
     
-        $scope.problem2 = function(){
-            if($scope.min.length == 3 ){
-                $scope.visible = true;    
-                  return true;
-               }else{
-                  return false;
-               }
-        }//problem 1 
-        
-        $scope.visible = true; 
-        $scope.disableSpan = function(thingy){
-            
-            if(thingy == true){
-                $scope.visible = false; 
-                
-            }
-            else{
-                $scope.visible = false; 
-            }
-            return $scope.visible;
- 
-        };
-        
-        $scope.signUP = function($scope){
-            $scope.user = 'John Doe';
-            $scope.email = 'john.doe@gmail.com';
-            $scope.password1 = '1234';
-            $scope.password2 = '1234';
-        };
+    $scope.logIn = function($scope){
+        $scope.user = 'John Doe';
+        $scope.password = '1234';
+    };
 };
 
 

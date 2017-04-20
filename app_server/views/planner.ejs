@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/bootstrap/css/main.css">
+    <link rel="stylesheet" href="/bootstrap/css/ie9.css">
+    <link rel="stylesheet" href="/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body ng-controller="MyController">
+    <div id="wrapper">
+      <!-- Header-->
+      <header id="header">
+        <div class="logo"><span class="icon fa-calendar"></span></div>
+        <div class="content">
+          <div class="inner">
+            <h1>Planner</h1>
+            <p>Plan Your Perfect Day</p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/planner">Planner</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+      <body>
+        
+<html ng-controller="MyController">
+  <head> 
+    <p>Input your price range below
+      <label class="radio-inline"></label>
+      <input type="radio" ng-model="opr2" value="vol1">
+      <!--, name='optradio', ng-model='opr1', ng-checked='model',-->Cheap: $15 and under 
+      <label class="radio-inline"></label>
+      <input type="radio" ng-model="opr2" value="vol2">Less Cheap: $16-30
+      <label class="radio-inline"></label>
+      <input type="radio" ng-model="opr2" value="vol3">Expensive: $30+
+    </p>
+    <nav>
+      <p>Distance you're able to travel
+        <label class="radio-inline"></label>
+      </p>
+      <input type="radio" ng-model="opr3" value="vol1">
+      <!--, name='optradio2', ng-model='disopr1', ng-checked='model',-->Walking Distance: under a mile  
+      <label class="radio-inline"></label>
+      <input type="radio" ng-model="opr3" value="vol2">A Short Drive: under 25 miles 
+      <label class="radio-inline"></label>
+      <input type="radio" ng-model="opr3" value="vol3">Road Trip: 25+ miles 
+    </nav>
+    <nav> 
+      <h1>Choose your rating</h1>
+      <fieldset class="rating">
+        <input id="star5" type="radio" name="rating" value="5">
+        <label for="star5" title="Awesome - 5 stars" class="full"></label>
+        <input id="star4" type="radio" name="rating" value="4">
+        <label for="star4" title="Pretty good - 4 stars" class="full"></label>
+        <input id="star3" type="radio" name="rating" value="3">
+        <label for="star3" title="Meh - 3 stars" class="full"></label>
+        <input id="star2" type="radio" name="rating" value="2">
+        <label for="star2" title="Kinda bad - 2 stars" class="full"></label>
+        <input id="star1" type="radio" name="rating" value="1">
+        <label for="star1" title="Sucks big time - 1 star" class="full"></label>
+      </fieldset>
+    </nav>
+    <nav>
+      <p>Minimum Length of Activity
+        <input type="text" name="minimum" ng-model="min">
+      </p>
+      <p>Minutes/Hours
+        <input type="text" name="minutesHours1" ng-model="minutesHours1">
+      </p>
+    </nav>
+    <nav>
+      <p>Maximum Length of Activity
+        <input type="text" name="maximum" ng-model="max">
+      </p>
+      <p>Minutes/Hours
+        <input type="text" name="minutesHours2" ng-model="minutesHours2">
+      </p>
+    </nav>
+    <nav> 
+      <p>Time Activity Begins
+        <select ng-model="selectedTimeBegin" ng-options="x.time for x in times"></select>
+        <h1>Begin time: {{selectedTimeBegin.hour}}:{{selectedTimeBegin.minutes}}</h1>
+      </p>
+      <p>AM/PM
+        <select ng-model="selectedTimeActivityBegins" ng-options="x.timeAMPM for x in amOrPm"></select>
+        <h1>You selected: {{selectedTimeActivityBegins.timeAMPM}}</h1>
+      </p>
+    </nav>
+    <nav>    
+      <p>Time Activity Ends by
+        <select ng-model="selectedTimeEnd" ng-options="x.time for x in times"></select>
+        <h1>End time: {{selectedTimeEnd.hour}}:{{selectedTimeEnd.minutes}}</h1>
+      </p>
+      <p>AM/PM
+        <select ng-model="selectedTimeActivityEnds" ng-options="x.timeAMPM for x in amOrPm"></select>
+        <h1>You selected: {{selectedTimeActivityEnds.timeAMPM}}</h1>
+      </p>
+    </nav>
+    <nav>
+      <p>Please choose a way to Travel:</p>
+      <select ng-model="selectedTransportation" ng-options="x.transport for x in transportation"></select>
+      <h1>You selected: {{selectedTransportation.transport}}</h1>
+    </nav>
+    <nav>
+      <div ng-app="">
+        <p>
+          <h1>Your zipcode is {{zipcode}}</h1>Zipcode : 
+          <input type="text" ng-model="zipcode">
+        </p>
+        
+        
+        
+        <nav>
+  <div ng-app=""></div>
+  <p>How many people are attending?</p>
+  <p>Adults</p>
+  <input type="text" name="adults" ng-model="adults">
+  <p>Children</p>
+  <input type="text" name="children" ng-model="children">
+  <p>Students</p>
+  <input type="text" name="students" ng-model="students">
+  <p>Eldery</p>
+  <input type="text" name="eldery" ng-model="eldery">
+</nav>
+        
+        
+        
+        
+      </div>
+    </nav>
+  </head>
+
+          
+      </body>
+      
+      <!-- Footer-->
+      <footer id="footer">
+        <p class="copyright">© Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+      </footer>
+    </div>
+    <!-- BG-->
+    <div id="bg"></div>
+    <!-- Scripts-->
+    <!--/node_modules/angular/angular.min.js-->
+    <script src="/bootstrap/js/skel.min.js"></script>
+    <script src="/bootstrap/js/util.js"></script>
+    <script src="/bootstrap/js/main.js"></script>
+    <script src="/angular/angular.min.js"></script>
+    <script src="/angular/plannerApp.js"></script>
+    <script src="/node_modules/angular/myApp.js"></script>
+  </body>
+  <!--   style.body{background-image: url(/public/bootstrap/images/overlay.png);}-->
+</html>
