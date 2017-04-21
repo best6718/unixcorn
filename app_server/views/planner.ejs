@@ -32,9 +32,14 @@
       </header>
       <body>
         
-<html ng-controller="MyController">
-  <head> 
-    <p>Input your price range below
+ <head ng-controller="MyController">
+
+     <br>
+     <br>
+       <styletable>
+         <br>
+    Input your price range below
+    <p>
       <label class="radio-inline"></label>
       <input type="radio" ng-model="opr2" value="vol1">
       <!--, name='optradio', ng-model='opr1', ng-checked='model',-->Cheap: $15 and under 
@@ -44,9 +49,8 @@
       <input type="radio" ng-model="opr2" value="vol3">Expensive: $30+
     </p>
     <nav>
-      <p>Distance you're able to travel
-        <label class="radio-inline"></label>
-      </p>
+        <center>Distance you're able to travel</center>
+      <p><label class="radio-inline"></label></p>
       <input type="radio" ng-model="opr3" value="vol1">
       <!--, name='optradio2', ng-model='disopr1', ng-checked='model',-->Walking Distance: under a mile  
       <label class="radio-inline"></label>
@@ -116,31 +120,68 @@
           <h1>Your zipcode is {{zipcode}}</h1>Zipcode : 
           <input type="text" ng-model="zipcode">
         </p>
-        
-        
-        
-        <nav>
-  <div ng-app=""></div>
-  <p>How many people are attending?</p>
-  <p>Adults</p>
-  <input type="text" name="adults" ng-model="adults">
-  <p>Children</p>
-  <input type="text" name="children" ng-model="children">
-  <p>Students</p>
-  <input type="text" name="students" ng-model="students">
-  <p>Eldery</p>
-  <input type="text" name="eldery" ng-model="eldery">
-</nav>
-        
-        
-        
-        
-      </div>
+        </div>
     </nav>
+    <nav>
+      <p>How many people are attending?</p>
+      Adults
+      <input type="text" name="adults" ng-model="adults">
+      Children
+      <input type="text" name="children" ng-model="children">
+      Students
+      <input type="text" name="students" ng-model="students">
+      Elderly
+      <input type="text" name="eldery" ng-model="eldery">
+    </nav>
+    <br>
+    <br>
+    <nav> 
+    
+    
+  <!--LETS GET THE MODAL THINGY-->
+          <!-- Trigger/Open The Modal -->
+          <button id="myBtn" ng-click="resultsForPlanner()" ng-class="!isOpen ? 'ion-ios-arrow-down' : 'ion-ios-arrow-up'" class="button button-clear button-positive icon-right">
+          Results
+            </button>
+          
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+          
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Results</h2>
+              </div>
+              <div class="modal-body">
+                <span ng-model='msg'>
+                  <p ng-model="resultsForPlanner()">
+                    <testtext>
+                      {{msg}}
+                      </testtext>
+                   </p>
+                </span>
+          
+              </div>
+              <div class="modal-footer">
+                <h3>Plan your perfect day!</h3>
+              </div>
+            </div>
+          
+          </div>
+
+    </nav>
+    
+    
+  </styletable>
   </head>
 
-          
       </body>
+      
+      
+      
+
+        
       
       <!-- Footer-->
       <footer id="footer">
